@@ -1,0 +1,72 @@
+// Globals
+lineHeight = 1.5
+baseFontSize = 20px
+half = .75rem
+full = 1.5rem
+threequarters = 2.25rem
+double = 3rem
+
+// Set baseline rhythm for the whole site
+:root
+  box-sizing border-box
+  font-family sans-serif
+  font-size baseFontSize
+  line-height lineHeight
+
+// Reset all the crap browsers do to kill your baseline efforts
+*
+  // line-height lineHeight
+  margin 0
+  padding 0
+  font-size 1rem
+  font-weight normal
+  border none
+
+*,
+*:before,
+*:after
+  box-sizing inherit
+
+// Fix table stuff
+table
+  border-spacing 0
+
+td,
+th
+  outline 2px solid #000
+  outline-offset -1px
+  padding 0 0.75rem
+
+// Fix sup and sub layout issues
+sup
+  display inline-block
+  transform translateY(-5px)
+  vertical-align baseline
+
+sub
+  display inline-block
+  transform translateY(5px)
+  vertical-align baseline
+
+// Fix input type layout issues
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='datetime'],
+input[type='datetime-local']
+  line-height 1
+
+// Use this for wrangling these responsive elements
+.resize iframe,
+.resize textarea,
+.resize canvas,
+.resize svg
+  width 100%
+
+// Handle images in a response manner
+.resize
+  img
+    height 100%
+    width 100%
+    object-fit cover
+    object-position 50% 50%

@@ -1,0 +1,31 @@
+{
+  "name": "rdmkit-starter",
+  "version": "1.0.0",
+  "description": "rdmkit starter files",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "parcel src/pug/index.pug --open 'google chrome canary'",
+    "devnoc": "parcel src/pug/index.pug --no-cache --open 'google chrome canary'",
+    "build": "parcel build src/pug/index.pug",
+    "predist": "rm -rf dist",
+    "dist": "parcel build src/stylus/index.styl --no-source-maps --no-content-hash --no-minify",
+    "postdist": "cp dist/stylus/index.css dist/ && rm -rf dist/stylus & cp src/index.js dist",
+    "zip": "zip -r rdmkit-starter.zip dist"
+  },
+  "keywords": [
+    "typography"
+  ],
+  "author": "Brownerd",
+  "repository": "",
+  "license": "ISC",
+  "dependencies": {
+    "rdmkit-rdm": "^1.0.3"
+  },
+  "devDependencies": {
+    "parcel": "^1.11.0",
+    "pug": "^2.0.3",
+    "rdmkit-cpl": "^1.0.14",
+    "rdmkit-mzr": "^1.0.6",
+    "rdmkit-vrt": "^1.0.9"
+  }
+}
