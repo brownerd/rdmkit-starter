@@ -42,17 +42,23 @@ input[type='datetime'],
 input[type='datetime-local'] {
   line-height: 1;
 }
-.resize iframe,
-.resize textarea,
+.resize {
+  overflow: hidden;
+  width: 100%;
+}
 .resize canvas,
-.resize svg {
+.resize iframe,
+.resize img,
+.resize svg,
+.resize textarea {
   width: 100%;
 }
 .resize img {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+}
+.resize img.gallery {
+  height: 100%;
 }
 kbd {
   background-color: #ccc;
